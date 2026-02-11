@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import sqlite3
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
+    
 
 def init_db():
     conn = sqlite3.connect('database.db')
@@ -45,6 +46,4 @@ def save_guest():
 
 if __name__ == '__main__':
     init_db()
-
     app.run(debug=True)
-
