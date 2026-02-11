@@ -1,5 +1,5 @@
 .element {
-    background: url(/static/img/photo_2025-12-08_15-29-41.jpg);
+    background: url(img/photo_2025-12-08_15-29-41.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@
 }
 
 .mesto-with-bg {
-    background: url(/static/img/photo_2026-01-07_18-49-53.jpg);
+    background: url(img/photo_2026-01-07_18-49-53.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 100px;
@@ -57,7 +57,7 @@
 
 @font-face {
     font-family: 'zont';
-    src: url('/static/fonts/ofont.ru_Moderustic.ttf') format('truetype');
+    src: url('fonts/ofont.ru_Moderustic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -145,7 +145,7 @@
 
 @font-face {
     font-family: 'ofont';
-    src: url('/static/fonts/ofont.ru_Old\ Classic.ttf') format('truetype');
+    src: url('fonts/ofont.ru_Old\ Classic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -390,4 +390,5 @@ input[type="radio"] {
     object-fit: cover;
     margin:0 auto;
     display: block;
+
 }
