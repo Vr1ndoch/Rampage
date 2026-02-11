@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.querySelector('input[placeholder="Ваше имя"]').value;
         const attendance = document.querySelector('input[name="attendance"]:checked');
         
-        if (!surname || !name || !attendance) {
-            alert('Пожалуйста, заполните все поля');
-            return;
-        }        
         fetch('/save_guest', {
             method: 'POST',
             headers: {
@@ -26,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('input[placeholder="Ваша фамилия"]').value = '';
                 document.querySelector('input[placeholder="Ваше имя"]').value = '';
                 document.querySelectorAll('input[name="attendance"]').forEach(radio => radio.checked = false);
-            } 
+            }
             else {
                 alert('Ошибка при сохранении данных');
             }
@@ -61,4 +57,3 @@ function updateTimer() {
 
 setInterval(updateTimer, 1000);
 updateTimer();
-
