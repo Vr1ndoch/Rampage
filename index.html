@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='/static/css/style.css'>
+    <script src="/static/js/script.js"></script>
+    <title>Свадебное приглашение</title>
+    
+</head>
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="/static/img/Video.mp4" type="video/mp4">
+    </video>
+    <div class="element">
+        <div class="lamba">Л А</div>
+        <div class="names">ЛЕНАР & АННА</div>
+        <div class="date">11.07.2026</div>
+    </div>    
+        <div class="greeting">Дорогие гости</div>
+        <div class="message">
+            В нашей жизни происходит чудо, и мы не можем представить этот день без вас!<br>
+            Приходите разделить с нами радость и стать частью нашей семьи в этот особенный момент.</div>
+        <div class="greeting">Формат мероприятия 18+</div>        
+        <div class="message">           
+            Мы очень любим ваших детей, но этот вечер мы хотели бы посвятить общению со взрослыми.<br>
+            Надеемся, наш праздник станет для вас отличным поводом отдохнуть и повеселиться от души!
+        </div>
+
+        <div class="datez">Дата</div>
+        <div class="datezz">2026-07-11</div>
+        <div class="text-center">
+            <div class="mesto-with-bg"> 
+                <h2 class="mesto3">Место проведения</h2>
+                <a class="mesto2">Праздник пройдет</a>
+                <a class="mesto2">В уютном Event-пространстве "VOZDUKH"</a>
+                <a class="mesto2">по адресу: Удмуртская Республика, г.Ижевск, ул.Кирова 8Б</a>
+                <a href="https://yandex.ru/maps/-/CLRO4OYG" class="special-link">Смотреть на карте</a>     
+            </div>   
+        </div>        
+        <h2>План мероприятия</h2>
+        <h2>Дресс-код</h2>
+        <div class="text-center">
+            <div class="dresscode">
+                <img src="/static/img/Frame 5.png">
+                <a>Основные цвета: желтый, светлый хаки, голубой, розовый, пудровый</a>
+            </div>
+        </div>
+        <div class="text-center">
+            <h2>Детали</h2>
+            <a>ПОДАРОК</a>
+            <a>Главное для нас - Ваше внимание.<br>
+                А радость доставит подарочек в конверте!<br>
+                В качестве альтернативы букета цветов будем признательны бутылочке приятного напитка и записки о событии, к которому нам приурочить ее открытие.
+            </a>
+        </div>
+        <div class="wedding-timer">
+            <div class="timer-title">До нашей свадьбы осталось:</div>
+            <div class="timer-container">
+                <div class="timer-unit">
+                    <span class="timer-number" id="days">0</span>
+                    <span class="timer-label">дней</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="hours">0</span>
+                    <span class="timer-label">часов</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="minutes">0</span>
+                    <span class="timer-label">минут</span>
+                </div>
+                <div class="timer-unit">
+                    <span class="timer-number" id="seconds">0</span>
+                    <span class="timer-label">секунд</span>
+                </div>
+            </div>
+        </div>  
+        <div class="text-center">
+            <h2>Анкета гостя</h2>
+            <h3>Подтвердите свое присутствие</h3>
+            <a>Анкета заполняется на каждого участника отдельно!!!</a>        
+            <a>Ваша Фамилия</a>
+            <input type="text" placeholder="Ваша фамилия">        
+            <a>Ваше Имя</a>
+            <input type="text" placeholder="Ваше имя">        
+            <div class="rsvp-buttons">
+                <label>
+                    <input type="radio" name="attendance" value="yes" required>
+                    Приду обязательно
+                </label>
+                <label>
+                    <input type="radio" name="attendance" value="no" required>
+                    К сожалению, меня не будет 
+                </label>
+                <button type="button" id="submitBtn" class="submit-button">Ответить</button>
+            </div>
+        </div>          
+    </div>
+</body>
+</html>
