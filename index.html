@@ -2,10 +2,104 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='style.css'>
-    <script src="script.js"></script>
-    <title>Свадебное приглашение</title>
+    <link rel='stylesheet' href='/static/css/style.css'>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим кнопку
+    const submitBtn = document.getElementById('submitBtn');
     
+    if (submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Кнопка нажата!'); // Проверяем, работает ли клик
+            
+            // Получаем значения полей
+            const surnameInput = document.querySelector('input[placeholder="Ваша фамилия"]');
+            const nameInput = document.querySelector('input[placeholder="Ваше имя"]');
+            const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+            
+            const surname = surnameInput ? surnameInput.value.trim() : '';
+            const name = nameInput ? nameInput.value.trim() : '';
+            
+            // Проверяем, выбрана ли радиокнопка
+            let attendance = null;
+            for (let radio of attendanceRadios) {
+                if (radio.checked) {
+                    attendance = radio.value;
+                    break;
+                }
+            }
+            
+            // Валидация
+            if (!surname) {
+                alert('Введите фамилию!');
+                return;
+            }
+            if (!name) {
+                alert('Введите имя!');
+                return;
+            }
+            if (!attendance) {
+                alert('Выберите, придете или нет!');
+                return;
+            }
+            
+            alert('Отправляем данные...');
+            
+            // Telegram данные
+            const BOT_TOKEN = '8269733600:AAFFBq1_6J5SOtDf5Mec2O2E7ym3RGYtapw';
+            const CHAT_ID = '1734991345';
+            
+            const message = `🎉 НОВЫЙ ОТВЕТ НА ПРИГЛАШЕНИЕ!
+            
+👤 Фамилия: ${surname}
+👤 Имя: ${name}
+✅ Статус: ${attendance === 'yes' ? 'ПРИДУ' : 'НЕ ПРИДУ'}
+🕐 Время: ${new Date().toLocaleString('ru-RU')}
+🌐 Страница: GitHub Pages`;
+
+            console.log('Отправляем сообщение в Telegram...');
+            
+            // Отправка в Telegram
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            })
+            .then(response => {
+                console.log('Ответ от Telegram:', response);
+                return response.json();
+            })
+            .then(data => {
+                console.log('Данные от Telegram:', data);
+                if (data.ok) {
+                    alert('✅ Спасибо! Ваш ответ отправлен молодоженам!');
+                    
+                    // Очищаем форму
+                    if (surnameInput) surnameInput.value = '';
+                    if (nameInput) nameInput.value = '';
+                    attendanceRadios.forEach(radio => radio.checked = false);
+                } else {
+                    alert('❌ Ошибка: ' + (data.description || 'Неизвестная ошибка'));
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка отправки:', error);
+                alert('❌ Не удалось отправить. Проверьте интернет и попробуйте еще раз.');
+            });
+        });
+    } else {
+        console.error('Кнопка не найдена! Проверьте id="submitBtn"');
+    }
+});
+</script>
+    <title>Свадебное приглашение</title>
 </head>
 <body>
     <video class="background-video" autoplay muted loop playsinline>
@@ -41,7 +135,7 @@
         <h2>Дресс-код</h2>
         <div class="text-center">
             <div class="dresscode">
-                <img src="img/Frame 5.png">
+                <img src="/static/img/Frame 5.png">
                 <a>Основные цвета: желтый, светлый хаки, голубой, розовый, пудровый</a>
             </div>
         </div>
@@ -74,28 +168,32 @@
                 </div>
             </div>
         </div>  
+
         <div class="text-center">
             <h2>Анкета гостя</h2>
             <h3>Подтвердите свое присутствие</h3>
-            <a>Анкета заполняется на каждого участника отдельно!!!</a>        
-            <a>Ваша Фамилия</a>
-            <input type="text" placeholder="Ваша фамилия">        
-            <a>Ваше Имя</a>
-            <input type="text" placeholder="Ваше имя">        
+            <p>Анкета заполняется на каждого участника отдельно!!!</p>
+            
+            <div>Ваша Фамилия</div>
+            <input type="text" placeholder="Ваша фамилия">
+            
+            <div>Ваше Имя</div>
+            <input type="text" placeholder="Ваше имя">
+            
             <div class="rsvp-buttons">
                 <label>
-                    <input type="radio" name="attendance" value="yes" required>
+                    <input type="radio" name="attendance" value="yes">
                     Приду обязательно
                 </label>
+                <br>
                 <label>
-                    <input type="radio" name="attendance" value="no" required>
-                    К сожалению, меня не будет 
+                    <input type="radio" name="attendance" value="no">
+                    К сожалению, меня не будет
                 </label>
+                <br><br>
                 <button type="button" id="submitBtn" class="submit-button">Ответить</button>
             </div>
-        </div>          
+        </div>     
     </div>
 </body>
-
 </html>
-
