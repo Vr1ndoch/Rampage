@@ -57,7 +57,7 @@
 
 @font-face {
     font-family: 'zont';
-    src: url('fonts/ofont.ru_Moderustic.ttf') format('truetype');
+    src: url('ofont.ru_Moderustic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -145,7 +145,7 @@
 
 @font-face {
     font-family: 'ofont';
-    src: url('fonts/ofont.ru_Old\ Classic.ttf') format('truetype');
+    src: url('ofont.ru_Old\ Classic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -392,3 +392,4 @@ input[type="radio"] {
     display: block;
 
 }
+
