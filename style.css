@@ -1,5 +1,5 @@
 .element {
-    background: url(/static/img/photo_2025-12-08_15-29-41.jpg);
+    background: url(img/photo_2025-12-08_15-29-41.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@
 }
 
 .mesto-with-bg {
-    background: url(/static/img/photo_2026-01-07_18-49-53.jpg);
+    background: url(img/photo_2026-01-07_18-49-53.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 100px;
@@ -53,23 +53,15 @@
 }
 
 
-
-
-@font-face {
-    font-family: 'zont';
-    src: url('ofont.ru_Moderustic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .lamba {
-    font-family: zont;
+    font-family: 'ofont';
     font-size: 4em;
     color: #ffffff;
     transform: rotate(5deg);
 }
 
-.names {    
+.names {   
+    font-family: 'ofont';
     font-size: 3em;
     color: #ffffff;
     text-align: center;
@@ -92,6 +84,7 @@
 }
 
 .greeting {
+    font-family: 'ofont';
     font-size: 4em;
     text-align: center;
     color: #000000;
@@ -109,12 +102,14 @@
 }
 
 .datez {
+    font-family: 'ofont';
     font-size: 4em;
     text-align: center;
     color: #000000;
 }
 
 .datezz {
+    font-family: 'ofont';
     font-style: italic;
     font-size: 5em;
     text-align: center;
@@ -130,7 +125,7 @@
 }
 
 h2, h3 {
-    font-family:"ofont";
+    font-family: 'ofont';
     font-size: 4em;
     color: #000000;
     margin: 50px auto 30px;
@@ -158,6 +153,7 @@ h2::after {
 }
 
 a {
+    font-family: 'ofont';
     font-size: 2em;
     color: #000000;
     display: block;
@@ -167,6 +163,7 @@ a {
 }
 
 .special-link {
+    font-family: 'ofont';
     color: #000000;
     font-weight: bold;
     background: #e6e6e6;
@@ -205,6 +202,7 @@ input[type="text"]:focus {
 }
 
 .rsvp-buttons h3 {
+    font-family: 'ofont';
     font-size: 2em;
     color: #000000;
     margin-bottom: 35px;
@@ -268,6 +266,7 @@ input[type="radio"] {
 }
 
 .timer-title {
+    font-family: 'ofont';
     font-size: 3.2em;
     color: #000000;
     margin-bottom: 40px;
