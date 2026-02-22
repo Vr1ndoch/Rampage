@@ -1,5 +1,5 @@
 .element {
-    background: url(img/photo_2025-12-08_15-29-41.jpg);
+    background: url(/static/img/photo_2025-12-08_15-29-41.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@
 }
 
 .mesto-with-bg {
-    background: url(img/photo_2026-01-07_18-49-53.jpg);
+    background: url(/static/img/photo_2026-01-07_18-49-53.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 100px;
@@ -70,7 +70,6 @@
 }
 
 .names {    
-    
     font-size: 3em;
     color: #ffffff;
     text-align: center;
@@ -101,7 +100,8 @@
 }
 
 .message {
-    font-size: 2em;
+    font-family:"ofont";
+    font-size: 2.7em;
     text-align: center;
     line-height: 1.7;
     color: #000000;
@@ -116,7 +116,7 @@
 
 .datezz {
     font-style: italic;
-    font-size: 2.5em;
+    font-size: 5em;
     text-align: center;
     color: #000000;
 }
@@ -124,12 +124,13 @@
 
 @font-face {
     font-family: 'ofont';
-    src: url('ofont.ru_Old\ Classic.ttf') format('truetype');
+    src: url('ofont.ru_Lifehack.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 h2, h3 {
+    font-family:"ofont";
     font-size: 4em;
     color: #000000;
     margin: 50px auto 30px;
@@ -343,4 +344,3 @@ input[type="radio"] {
     margin:0 auto;
     display: block;
 }
-
