@@ -2,13 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href='style.css'>
-    <script src="script.js"></script>
+    <link rel='stylesheet' href='/static/css/style.css'>
+    <script src="/static/js/script.js"></script>
     <title>Свадебное приглашение</title>
 </head>
 <body>
     <video class="background-video" autoplay muted loop playsinline>
-        <source src="img/Video.mp4" type="video/mp4">
+        <source src="/static/img/Video.mp4" type="video/mp4">
     </video>
     <div class="element">
         <div class="lamba">Л А</div>
@@ -49,7 +49,7 @@
         <h2>Дресс-код</h2>
         <div class="text-center">
             <div class="dresscode">
-                <img src="img/Frame 5.png">
+                <img src="/static/img/Frame 5.png">
                 <a>Основные цвета: желтый, светлый хаки, голубой, розовый, пудровый</a>
             </div>
         </div>
@@ -85,23 +85,30 @@
         <div class="text-center">
             <h2>Анкета гостя</h2>
             <h3>Подтвердите свое присутствие</h3>
-            <a>Анкета заполняется на каждого участника отдельно!!!</a>        
-            <a>Ваша Фамилия</a>
-            <input type="text" placeholder="Ваша фамилия">        
-            <a>Ваше Имя</a>
-            <input type="text" placeholder="Ваше имя">        
-            <div class="rsvp-buttons">
-                <label>
-                    <input type="radio" name="attendance" value="yes" required>
-                    Приду обязательно
-                </label>
-                <label>
-                    <input type="radio" name="attendance" value="no" required>
-                    К сожалению, меня не будет 
-                </label>
-                <button type="button" id="submitBtn" class="submit-button">Ответить</button>
-            </div>
-        </div>          
+            <p style="font-size: 1.5em;">Анкета заполняется на каждого участника отдельно!!!</p>
+            <form id="guestForm" action="https://script.google.com/macros/s/AKfycbzQkV9V30NM5h672WKQEzQ4mgoKZPAxs6xGflwnRItez64lfu2OaB-GF-H4Yaa1h-Ld/exec" method="POST">
+                
+                <label style="font-size: 2em; display: block;">Ваша Фамилия</label>
+                <input type="text" name="lastname" placeholder="Ваша фамилия" required>
+                
+                <label style="font-size: 2em; display: block;">Ваше Имя</label>
+                <input type="text" name="firstname" placeholder="Ваше имя" required>
+                
+                <div class="rsvp-buttons">
+                    <label>
+                        <input type="radio" name="attendance" value="Приду обязательно" required>
+                        Приду обязательно
+                    </label>
+                    <label>
+                        <input type="radio" name="attendance" value="Не приду" required>
+                        К сожалению, меня не будет 
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-button">Ответить</button>
+            </form>
+            <div id="result-message" style="font-size: 2em; margin-top: 20px;"></div>
+        </div>
     </div>
 </body>
 </html>
