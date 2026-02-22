@@ -63,6 +63,7 @@
 }
 
 .lamba {
+    font-family: zont;
     font-size: 4em;
     color: #ffffff;
     transform: rotate(5deg);
@@ -342,3 +343,4 @@ input[type="radio"] {
     margin:0 auto;
     display: block;
 }
+
