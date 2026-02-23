@@ -53,9 +53,6 @@
     0 0 30px black;
 }
 
-
-
-
 @font-face {
     font-family: 'zont';
     src: url('ofont.ru_Moderustic.ttf') format('truetype');
@@ -100,7 +97,6 @@
     text-align: center;
     color: #000000;
     margin-bottom: 25px;
-
 }
 
 .message {
@@ -127,7 +123,6 @@
     color: #000000;
 }
 
-
 @font-face {
     font-family: 'ofont';
     src: url('ofont.ru_Lifehack.ttf') format('truetype');
@@ -148,19 +143,38 @@ h2, h3 {
 }
 
 h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 3px;
+    display: none;
+}
+
+.greeting,
+.datez,
+.mesto3,
+h2 {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 15px !important;
+}
+
+.greeting {
+    text-decoration-color: #000000 !important;
+}
+
+.datez {
+    text-decoration-color: #000000 !important;
+}
+
+.mesto3 {
+    text-decoration-color: #ffffff !important;
+}
+
+h2 {
+    text-decoration-color: #000000 !important;
 }
 
 .text-center {
     text-align: center;
-      width: 80%;
-      margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 a {
@@ -266,7 +280,7 @@ input[type="radio"] {
 
 .submit-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px #000000;;
+    box-shadow: 0 10px 25px #000000;
 }
 
 .wedding-timer {
@@ -304,7 +318,6 @@ input[type="radio"] {
     0 0 10px black,
     0 0 20px black,
     0 0 30px black;
-
 }
 
 .timer-number {
@@ -318,7 +331,6 @@ input[type="radio"] {
     font-size: 1.4em;
     color: #000000;
     font-weight: 500;
-    
 }
 
 .section {
@@ -328,7 +340,6 @@ input[type="radio"] {
     position: relative;
     overflow: hidden;
 }
-
 
 .color-dots {
     position: absolute;
