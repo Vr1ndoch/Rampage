@@ -7,6 +7,7 @@
     height: 95vh;
     display: flex;
     flex-direction: column;
+    padding: 40px 20px;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
@@ -53,6 +54,15 @@
 }
 
 
+
+
+@font-face {
+    font-family: 'zont';
+    src: url('ofont.ru_Moderustic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .lamba {
     font-family: 'ofont';
     font-size: 4em;
@@ -76,6 +86,7 @@
 }
 
 .date {
+    font-family: 'ofont';
     font-size: 2em;
     color: #ffffff;
     text-align: center;
@@ -344,4 +355,93 @@ input[type="radio"] {
     display: block;
 }
 
+.lamba-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 60px;
+}
 
+.lamba {
+    font-family: 'ofont';
+    font-size: 4em;
+    color: #ffffff;
+    transform: rotate(5deg);
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        0 0 10px rgba(0,0,0,0.5),
+        0 0 20px rgba(0,0,0,0.3);
+}
+
+.lamba-decor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250%; 
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9; 
+}
+
+.names {
+    font-family: 'ofont';
+    font-size: 3em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+.schedule {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.schedule-time {
+    font-family: 'ofont';
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    min-width: 100px;
+}
+
+.schedule-desc {
+    font-family: 'ofont';
+    font-size: 3em;
+    color: #000000;
+    margin-left: 30px;
+    flex: 1;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .schedule-time {
+        margin-bottom: 5px;
+    }
+    
+    .schedule-desc {
+        margin-left: 0;
+    }
+}
