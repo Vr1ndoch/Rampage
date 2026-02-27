@@ -401,19 +401,18 @@ input[type="radio"] {
     text-underline-offset: 10px;
 }
 
-.schedule-address {
-    font-size: 1em;
-    color: #000000;
-    display: block;
-    margin-top: 5px;
-    font-family: 'ofont';
+.schedule {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .schedule-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
-    padding: 10px 0;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    gap: 20px; 
 }
 
 .schedule-time {
@@ -421,34 +420,44 @@ input[type="radio"] {
     font-size: 2.2em;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    min-width: 120px;
+    min-width: 90px;
     padding: 5px 10px;
     border-radius: 10px;
     text-align: center;
+    white-space: nowrap; 
+    flex-shrink: 0;
 }
 
 .schedule-desc {
     font-family: 'ofont';
-    font-size: 2.7em;
+    font-size: 2.4em;
     color: #000000;
-    margin-left: 30px;
-    flex: 1;
     line-height: 1.4;
+    flex: 1;
+}
+
+.schedule-address {
+    font-size: 1.1em;
+    color: #000000;
+    display: block;
+    margin-top: 5px;
+    font-family: 'ofont';
 }
 
 @media (max-width: 768px) {
     .schedule-item {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 5px;
     }
     
     .schedule-time {
-        margin-bottom: 10px;
         min-width: auto;
+        white-space: normal;
+        align-self: flex-start;
     }
     
     .schedule-desc {
         margin-left: 0;
-        font-size: 2.2em;
+        font-size: 2em;
     }
 }
